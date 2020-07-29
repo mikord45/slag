@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:3000/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Document_files/style.css">
+    <script src="./Document_files/jquerry.js.pobrany plik"></script>
+    <script src="./Document_files/three_ver97.js.pobrany plik"></script>
+    <script src="./Document_files/OrbitControls.js.pobrany plik"></script>
+    <script src="./Document_files/Stats.js.pobrany plik"></script>
+    <script src="./Document_files/Block.js.pobrany plik"></script>
+    <script src="./Document_files/Game.js.pobrany plik"></script>
+    <script src="./Document_files/GridItem.js.pobrany plik"></script>
+    <script src="./Document_files/Main.js.pobrany plik"></script>
+    <script>
+        javascript: (function () { var script = document.createElement('script'); script.onload = function () { var stats = new Stats(); document.body.appendChild(stats.dom); requestAnimationFrame(function loop() { stats.update(); requestAnimationFrame(loop) }); }; script.src = '//mrdoob.github.io/stats.js/build/stats.min.js'; document.head.appendChild(script); })()
+    </script><script src="./Document_files/stats.min.js.pobrany plik"></script>
+    <script src="./Document_files/socket.io.js.pobrany plik"></script>
+    <script>
+        var socket = io();
+        socket.on("onconnect", function (data) {
+            alert(data.clientName)
+        })
+        console.log(game)
+        setTimeout(function () {
+            game.socket = socket
+        }, 1500)
+    </script>
+</head>
+
+<body>
+    <div id="root">
+
+    <canvas width="1240" height="938" style="width: 1240px; height: 938px;"></canvas></div>
+
+
+<div style="position: fixed; top: 0px; left: 0px; cursor: pointer; opacity: 0.9; z-index: 10000;"><canvas width="80" height="48" style="width: 80px; height: 48px; display: block;"></canvas><canvas width="80" height="48" style="width: 80px; height: 48px; display: none;"></canvas><canvas width="80" height="48" style="width: 80px; height: 48px; display: none;"></canvas></div></body></html>
